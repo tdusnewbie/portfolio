@@ -1,0 +1,10 @@
+site_name: My Portfolio
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: indigo
+    accent: indigo
+nav:
+  - Home: index.md
+  - CV: cv.md
