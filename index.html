@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dung Tran | Senior DevOps Engineer</title>
+    <meta name="description" content="Portfolio of Dung Tran, Senior DevOps Engineer specializing in Kubernetes, GitOps, and Cloud-Native Architecture.">
+    
+    <!-- Pico.css - Minimalist & Zero JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    
+    <style>
+        :root {
+            --pico-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            --pico-primary: #3b82f6;
+            --pico-primary-hover: #2563eb;
+        }
+        
+        body { padding-top: 1rem; }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 0;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+            border-bottom: 1px solid var(--pico-muted-border-color);
+            margin-bottom: 3rem;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--pico-primary);
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            object-fit: cover;
+        }
+
+        .project-card {
+            border: 1px solid var(--pico-muted-border-color);
+            padding: 1.5rem;
+            border-radius: 12px;
+            background: var(--pico-card-background-color);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: var(--pico-primary);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.1rem 0.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--pico-primary);
+            border: 1px solid var(--pico-primary);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .metric {
+            color: var(--pico-primary);
+            font-weight: 700;
+        }
+
+        details summary {
+            font-weight: 600;
+            color: var(--pico-muted-color);
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        details[open] summary {
+            margin-bottom: 1rem;
+            color: var(--pico-primary);
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .cv-button {
+            margin-top: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        h2 { border-left: 4px solid var(--pico-primary); padding-left: 1rem; margin-bottom: 2rem; }
+
+        ul.tech-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul.tech-list li::before {
+            content: "▹";
+            color: var(--pico-primary);
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="assets/avatar.jpeg" alt="Dung Tran" class="avatar">
+            <h1>Dung Tran</h1>
+            <p style="font-size: 1.25rem; color: var(--pico-muted-color);">Senior DevOps Engineer</p>
+            <div class="social-links">
+                <a href="https://github.com/tdusnewbie" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/dung-tran-145952186" target="_blank">LinkedIn</a>
+                <a href="mailto:trdung.8398@gmail.com">Email</a>
+            </div>
+            <br>
+            <a href="assets/DungTran_CV.pdf" target="_blank" role="button" class="cv-button">Download Full CV (PDF)</a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>Executive Summary</h2>
+            <p>
+                Strategic Senior DevOps Engineer with <strong>6+ years</strong> of experience specializing in <strong>Cloud-Native Architecture</strong> and <strong>Platform Engineering</strong>. 
+                I focus on building high-scale infrastructure on AWS/Azure using GitOps and FinOps principles. 
+                My core strength lies in creating self-service platforms that enable developer independence without compromising security.
+            </p>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="projects">
+            <h2>Innovation Lab & Engineering Projects</h2>
+            <div class="grid">
+                
+                <!-- Project 1: Homelab -->
+                <article class="project-card">
+                    <h5 style="margin-bottom: 0.5rem;">Hybrid-Cloud Enterprise Homelab</h5>
+                    <p style="font-size: 0.9rem;">
+                        A production-grade <span class="metric">2-node Proxmox HA cluster</span> with a cloud-witness node (OCI). 
+                        Designed a multi-layer traffic flow from Nginx Proxy Manager to Traefik Ingress.
+                    </p>
+                    <details>
+                        <summary>Technical Deep Dive</summary>
+                        <ul style="font-size: 0.85rem;">
+                            <li><strong>Networking:</strong> Full redundancy via Keepalived & Technitium DNS cluster.</li>
+                            <li><strong>Storage:</strong> Longhorn distributed block storage for persistent K3s volumes.</li>
+                            <li><strong>Observability:</strong> Grafana LGTM stack (Alloy, Mimir, Loki, Tempo) for unified telemetry.</li>
+                        </ul>
+                    </details>
+                    <footer>
+                        <span class="badge">K3s</span> <span class="badge">ArgoCD</span> <span class="badge">Ansible</span> <span class="badge">Tailscale</span>
+                    </footer>
+                </article>
+
+                <!-- Project 2: Platform -->
+                <article class="project-card">
+                    <h5 style="margin-bottom: 0.5rem;">Internal Developer Platform (IDP)</h5>
+                    <p style="font-size: 0.9rem;">
+                        Engineered a self-service framework enabling independent management of <span class="metric">200+ microservices</span>. 
+                        Reduced infrastructure provisioning time by <span class="metric">70%</span>.
+                    </p>
+                    <details>
+                        <summary>Technical Deep Dive</summary>
+                        <ul style="font-size: 0.85rem;">
+                            <li><strong>Automation:</strong> Modular CI/CD design using GitHub Reusable Workflows.</li>
+                            <li><strong>Scaling:</strong> Event-driven node/pod scaling via Karpenter and KEDA.</li>
+                            <li><strong>Standardization:</strong> App-of-Apps pattern in ArgoCD for multi-cluster state.</li>
+                        </ul>
+                    </details>
+                    <footer>
+                        <span class="badge">AWS</span> <span class="badge">Helm</span> <span class="badge">Makefile</span> <span class="badge">Karpenter</span>
+                    </footer>
+                </article>
+
+                <!-- Project 3: Security -->
+                <article class="project-card">
+                    <h5 style="margin-bottom: 0.5rem;">Zero-Trust Security & IaC</h5>
+                    <p style="font-size: 0.9rem;">
+                        Modernized the security stack with <span class="metric">HashiCorp Vault</span> and <span class="metric">SOPS</span>. 
+                        Implemented sidecar-less secret injection into production pods.
+                    </p>
+                    <details>
+                        <summary>Technical Deep Dive</summary>
+                        <ul style="font-size: 0.85rem;">
+                            <li><strong>Security:</strong> Integrated Bank-Vaults for dynamic secret injection.</li>
+                            <li><strong>IaC:</strong> Modular Terragrunt skeleton for 10+ AWS/Azure accounts.</li>
+                            <li><strong>Identity:</strong> Passwordless AWS authentication via GitHub OIDC.</li>
+                        </ul>
+                    </details>
+                    <footer>
+                        <span class="badge">Vault</span> <span class="badge">Terragrunt</span> <span class="badge">OIDC</span> <span class="badge">Bank-Vaults</span>
+                    </footer>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" style="margin-top: 2rem;">
+            <h2>Technical Stack</h2>
+            <div class="grid">
+                <div>
+                    <h6 style="color: var(--pico-primary);">Orchestration</h6>
+                    <ul class="tech-list" style="font-size: 0.9rem;">
+                        <li>Kubernetes (EKS/AKS/K3s)</li>
+                        <li>ArgoCD & Helm</li>
+                        <li>Karpenter & KEDA</li>
+                        <li>Traefik & Nginx Ingress</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 style="color: var(--pico-primary);">IaaC & Automation</h6>
+                    <ul class="tech-list" style="font-size: 0.9rem;">
+                        <li>Terraform & Terragrunt</li>
+                        <li>Ansible & Pulumi</li>
+                        <li>GitHub Actions</li>
+                        <li>Makefile & Bash</li>
+                    </ul>
+                </div>
+                <div>
+                    <h6 style="color: var(--pico-primary);">Observability & Ops</h6>
+                    <ul class="tech-list" style="font-size: 0.9rem;">
+                        <li>Grafana LGTM Stack</li>
+                        <li>Prometheus & Alloy</li>
+                        <li>HashiCorp Vault & SOPS</li>
+                        <li>Teleport & Bank-Vaults</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="container">
+        <hr>
+        <p style="text-align: center; color: var(--pico-muted-color);">
+            © 2026 Dung Tran • Built with Pico.css (Zero JS) • Managed via GitOps
+        </p>
+    </footer>
+
+</body>
+</html>

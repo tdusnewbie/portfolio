@@ -1,0 +1,15 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+site/
+.python-version
+.idea/
+.vscode/
+node_modules/
+dist/
+build/
+*.pdf
+# But we DO want to keep the final CV PDF
+!assets/DungTran_CV.pdf

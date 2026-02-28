@@ -1,26 +1,46 @@
-# Portfolio Repository 🌐
-This portfolio is built using **MkDocs** and the **Material theme**, ideal for a Python developer.
+# My Portfolio 🚀
 
-## Features
-- **Markdown-driven**: Easy to maintain CV and project pages.
-- **Python-powered**: Flexible and extensible.
-- **Homelab hosting**: Designed to be served from your on-prem server.
+A modern, minimalist, single-page professional portfolio built with **Pico.css** (Zero JS) and **Typst**, designed for GitOps deployment on a K3s cluster.
 
-## Getting Started
-1. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. **Run locally**:
-   ```bash
-   mkdocs serve
-   ```
-3. **Build for hosting**:
-   ```bash
-   mkdocs build
-   ```
-   Copy the `site/` directory to your web server (e.g., Nginx, Apache).
+## 📁 Project Structure
 
-## Hosting on Homelab
-- **Docker**: Use the `squidfunk/mkdocs-material` image.
-- **Static files**: Serve the `site/` directory directly.
+- `index.html`: Main landing page built with Pico.css.
+- `assets/`: Images and the final generated PDF version of the CV.
+- `cv/`: Source directory for the CV.
+  - `cv.typ`: The Typst source file for the CV.
+- `k8s/`: Kubernetes manifests for deployment on K3s.
+- `.github/workflows/`: GitHub Actions for CI/CD.
+- `Dockerfile`: Nginx-based Docker image for serving the site.
+
+## 🚀 Development & CV Updates
+
+1. **Update CV Content**:
+   Edit `cv/cv.typ`.
+2. **Compile to PDF**:
+   ```bash
+   typst compile cv/cv.typ assets/DungTran_CV.pdf
+   ```
+
+## ☸️ Deployment
+
+### GitHub Actions (CI/CD)
+The repository is equipped with a GitHub Action (`.github/workflows/deploy.yaml`) that:
+1. Compiles the Typst CV into a PDF.
+2. Builds a production-ready Docker image.
+3. Pushes the image to GitHub Container Registry (GHCR).
+
+### Manual Deployment
+1. **Build and Push Image:**
+   ```bash
+   docker build -t your-registry/portfolio:latest .
+   docker push your-registry/portfolio:latest
+   ```
+
+2. **Deploy to Cluster:**
+   Update the image and hostnames in `k8s/deployment.yaml`, then apply:
+   ```bash
+   kubectl apply -f k8s/deployment.yaml
+   ```
+
+---
+*Built with ❤️ and managed via GitOps.*
