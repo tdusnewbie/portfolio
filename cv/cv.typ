@@ -29,7 +29,7 @@
 
 #resume-entry(
   title: "Vietnam Silicon",
-  location: "Senior DevOps Engineer / Platform Lead",
+  location: "Senior DevOps Engineer",
   date: "Apr 2025 – Present",
   description: "Ho Chi Minh City, Vietnam"
 )
